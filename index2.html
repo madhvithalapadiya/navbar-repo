@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Model Demo</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .box-container {
+    display: flex;
+    gap: 30px;
+  }
+
+  .box {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid #333;
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+
+  .default {
+    /* Default box model */
+    box-sizing: content-box;
+  }
+
+  .border-box {
+    /* Border-box model */
+    box-sizing: border-box;
+  }
+
+  h2 {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h2>Default vs Border-Box Box Model</h2>
+<div class="box-container">
+  <div class="box default">
+    Default Box<br>
+    <small>width + padding + border = bigger</small>
+  </div>
+
+  <div class="box border-box">
+    Border-Box<br>
+    <small>total width fixed = 200px</small>
+  </div>
+</div>
+
+</body>
+</html>
